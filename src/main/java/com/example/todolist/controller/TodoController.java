@@ -90,7 +90,7 @@ public class TodoController {
             return "todo";
         }
 
-        todo.setUserName(getLoggedInUserName());
+        todo.setUserName(getLoggedInUserName(model));
         todoService.saveTodo(todo);
         return "redirect://list-todos";
     }
